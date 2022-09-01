@@ -41,7 +41,6 @@ for i in range(len(restaurants)):
 zomato['mean_rating'] = round(zomato['mean_rating'], 2)
 
 tfidf = TfidfVectorizer(analyzer='word', ngram_range=(1, 2), min_df=0, stop_words='english')
-#tfidf_matrix = tfidf.fit_transform(zomato['location'], zomato['cuisines'])
 tfidf_matrix = tfidf.fit_transform( zomato['cuisines'])
 
 cosine_similarities = linear_kernel(tfidf_matrix, tfidf_matrix)
