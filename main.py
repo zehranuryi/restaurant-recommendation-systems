@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-import uvicorn
 
 from restaurant_recommendation_systems import RestaurantRecommender, RestaurantRecommenderByCuisine
 
